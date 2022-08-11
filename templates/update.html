@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- # Stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static', filename='water.css')}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Update</title>
+</head>
+<body>
+
+    <h2>Task Ändern</h2>
+    <form action='{{ url_for("update", id=task.id) }}' method='post'>
+        <label for='content'>Inhalt:</label>
+        <input type='text' name='content' id="content" value="{{ task.content }}">
+        <button type="submit">Update</button>
+    </form>
+
+</body>
+</html>
